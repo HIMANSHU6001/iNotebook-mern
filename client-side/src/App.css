@@ -1,0 +1,64 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: 0px;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(67%);
+    }
+
+    to {
+        transform: translateX(0%);
+
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(67%);
+
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 1s ease-in-out 0s 1 forwards;
+}
+
+.fadeOut {
+    animation: fadeOut 1s ease-in-out 0s 1 forwards;
+}
+
+.slideLeft {
+    animation: slideLeft 1s ease-in-out 0s 1 forwards;
+}
+
+.slideRight {
+    animation: slideRight 1s ease-in-out 0s 1 forwards;
+}
