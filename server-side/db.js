@@ -5,7 +5,8 @@ async function connectToMongo() {
     console.log("Connecting to Mongo.....", process.env.URI);
     await mongoose.connect(process.env.URI, {
       useNewUrlParser: true,
-      useUnifiedTopology: true
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 5000,
   })
     console.log("Connected to Mongo");
     }
