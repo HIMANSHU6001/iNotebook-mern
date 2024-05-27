@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 const NoteState = (props) => {
     
     // const port = process.env.PORT||5000;
+    const host = "https://i-notebook-mern-five.vercel.app";
     let notesInitial = []
     const [notes, setNotes] = useState(notesInitial);
     const [displayNotes, setDisplayNotes] = useState([])
@@ -65,7 +66,7 @@ const NoteState = (props) => {
 
     // Get all Notes
     const fetchAllNotes = async () => {
-        const url = `/api/notes/fetchallnotes`
+        const url = `${host}/api/notes/fetchallnotes`
         const response = await fetch(url, {
             method: "GET",
             headers: {
@@ -79,7 +80,7 @@ const NoteState = (props) => {
 
     // Add a note
     const addNote = async (title, description, tag) => {
-        const url = `/api/notes/addnote`
+        const url = `${host}/api/notes/addnote`
         const response = await fetch(url, {
             method: "POST",
             headers: {

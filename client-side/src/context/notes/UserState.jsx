@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 function UserState(props) {
     const navigate = useNavigate()
-    const host = "http://localhost:5000";
+    const host = "https://i-notebook-mern-five.vercel.app";
     const { showAlert } = props;
     let tagsInitial = {}
     const [currentTags, setTags] = useState(tagsInitial);
