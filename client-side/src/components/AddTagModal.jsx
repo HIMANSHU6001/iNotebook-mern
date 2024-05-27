@@ -6,6 +6,7 @@ import UserContext from '../context/notes/userContext';
 function AddTagModal(props) {
     const userContext = useContext(UserContext);
     const { currentTags, createTag } = userContext;
+    
     const [colorPicked, setColorPicked] = useState('#ff4f5b');
 
     const validateName = (value) => {
